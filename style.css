@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+:root{
+    --bg-primary : rgb(114, 207, 247);
+    --bg-secundary : white;
+    --img : url("https://img.icons8.com/material-outlined/24/sun--v1.png");
+}
+
+*{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+.logo{
+    position: fixed;
+    margin: 10px 0 0 20px;
+}
+.menu{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.menu__button{
+    margin-top: 13px ;
+    position: fixed;
+    right: 100px;
+    padding: .5rem 0 .5rem .5rem;
+    letter-spacing: .5rem;
+    display: flex;
+    gap: 3rem;
+}
+.button{
+    cursor: pointer;
+}
+.button:hover{
+    transition: .4s;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+.intro{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(var(--bg-primary),var(--bg-secundary));
+    width: 100vw;
+    box-sizing: border-box;
+    height: 90vh;
+    padding: 7rem 10rem 0 10rem; 
+}
+.intro__text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+.icons{
+    margin-left: 2em;
+    letter-spacing: 5em;
+}
+.picture{
+    height: 20em;
+    border-radius: 30em;
+}
+.about{
+    background-color: var(--bg-secundary);
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    letter-spacing: .1rem;
+    padding: 6rem;
+    font-weight: 400;
+    align-items: center;
+}
+.works{
+    background-color: var(--bg-secundary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    padding: 4rem 0 15rem 0;
+}
+.works__code{
+    letter-spacing: 40px;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-image: linear-gradient(var(--bg-secundary),var(--bg-primary));
+    text-align: center;
+    font-size: large;
+    padding: 5%;
+    font-weight: 300;
+}
+.footer__icons{
+    letter-spacing: 20px;
+}
+.up{
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    opacity: 0;
+    transition: 1s;
+}
+.midi{
+    height: 550px;
+    width: 550px;
+    border-radius: 10%;
+    border: .5px solid black;
+}
+.dark_mode{
+    --bg-primary : #27374D; 
+    --bg-secundary : #526D82;
+    --img : url("https://img.icons8.com/small/24/moon-symbol.png");
+}
+.mode{
+    background-image : var(--img);
+    width: 24px;
+    height: 24px;
+}
+#mouse {
+	display: block;
+	width: 22px;
+	height: 40px;
+	border-radius: 20px;
+	border: 4px solid var(--bg-primary);
+	text-align: center;
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	bottom: 20px;
+	margin: 0 auto;
+}
+
+#mouse::before {
+	content: '';
+	display: inline-block;
+	width: 4px;
+	height: 8px;
+	position: relative;
+	border-radius: 4px;
+	background: var(--bg-primary);
+	animation-name: mouse;
+    animation-duration: .7s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes mouse {
+	from {
+		top: 0px;
+	}
+  to {
+		top: 6px;
+	}
+}
